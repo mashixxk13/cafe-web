@@ -11,22 +11,20 @@ html{
 body{
   font-family:'Montserrat', sans-serif;
   background:
-    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+    linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.96)),
     url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1400&q=80");
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
   color:white;
   overflow-x:hidden;
-  margin:0;
-  padding:0;
 }
 
 .bg{
   position:fixed;
   inset:0;
   background:
-    radial-gradient(circle at top, rgba(255,90,40,0.25), transparent 40%),
+    radial-gradient(circle at top, rgba(255,90,40,0.22), transparent 38%),
     url('https://www.transparenttextures.com/patterns/stardust.png');
   z-index:-1;
 }
@@ -98,18 +96,19 @@ nav a:hover{
   margin-top:30px;
   padding:16px 45px;
   border-radius:60px;
-  background:linear-gradient(180deg, #ff1e00, #b30000);
+  background:linear-gradient(180deg, #ff6a36, #ff3d00);
   color:white;
   text-decoration:none;
   font-size:22px;
   font-weight:800;
   transition:0.3s;
   box-shadow:
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 0, 0, 0.3);
+    0 0 20px rgba(255, 90, 40, 0.65),
+    0 0 45px rgba(255, 90, 40, 0.32);
 }
 
-.btn:hover{
+.btn:hover,
+.hower-btn:hover{
   transform:scale(1.05);
 }
 
@@ -117,13 +116,13 @@ nav a:hover{
   display:inline-block;
   margin-top:20px;
   padding:10px 24px;
-  background:linear-gradient(180deg, #ff1e00, #b30000);
+  background:linear-gradient(180deg, #ff6a36, #ff3d00);
   color:white;
   text-decoration:none;
   font-size:13px;
   font-weight:700;
   border-radius:40px;
-  box-shadow:0 0 10px rgba(255, 0, 0, 0.5);
+  box-shadow:0 0 10px rgba(255, 90, 40, 0.45);
   transition:0.3s;
 }
 
@@ -132,48 +131,43 @@ nav a:hover{
   height:520px;
   border-radius:50%;
   background:
-    url('https://images.unsplash.com/photo-1614728894747-a83421789f10?auto=format&fit=crop&w=1200&q=80')
-    center/cover;
+    radial-gradient(circle at center, rgba(0,0,0,0.02), rgba(0,0,0,0.72)),
+    url('https://images.unsplash.com/photo-1614728894747-a83421789f10?auto=format&fit=crop&w=1200&q=80') center/cover;
   box-shadow:
-    0 0 60px rgba(255,90,40,0.5),
+    0 0 60px rgba(255,90,40,0.45),
     0 0 120px rgba(255,90,40,0.2);
 }
 
 section{
-  width:90%;
-  max-width:1100px;
+  width:min(1100px, 90%);
   margin:60px auto;
-  padding:100px 8%;
 }
 
 .glass{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
+  background:rgba(12,12,12,0.78);
+  border:1px solid rgba(255,255,255,0.08);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
   border-radius:30px;
   padding:40px;
-  box-shadow:
-    0 0 30px rgba(255,90,40,0.15);
+  box-shadow:0 0 30px rgba(255,90,40,0.15);
   transition:0.4s;
 }
 
 .glass:hover{
   transform:translateY(-5px);
-  box-shadow:
-    0 0 40px rgba(255,90,40,0.3);
+  box-shadow:0 0 40px rgba(255,90,40,0.28);
 }
 
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:30px;
 }
 
 .about-text,
 .about-image{
-  border-radius:30px;
-  padding:40px;
+  min-height:420px;
 }
 
 .about-text h2{
@@ -186,31 +180,41 @@ section{
   line-height:1.9;
   color:#d6d6d6;
   margin-bottom:20px;
+  font-size:18px;
+}
+
+.about-image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .about-image img{
   width:100%;
+  max-width:520px;
   border-radius:20px;
+  display:block;
 }
 
 .title{
-  color:#ff4d2d;
+  color:#ff5a28;
   font-size:42px;
   font-weight:900;
   margin-bottom:30px;
   text-align:center;
-  text-shadow:0 0 15px rgba(255, 72, 0, 0.8);
+  text-shadow:0 0 15px rgba(255, 72, 0, 0.45);
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
 }
 
 .card{
-  padding:35px;
+  padding:30px;
   border-radius:25px;
+  min-height:160px;
   transition:0.4s;
 }
 
@@ -223,21 +227,23 @@ section{
 .card h3{
   margin-bottom:20px;
   color:#ff5a28;
+  font-size:30px;
 }
 
 .card p{
   line-height:1.8;
   color:#d7d7d7;
+  font-size:18px;
 }
 
 .gallery{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:10px;
+  gap:24px;
   flex-wrap:wrap;
-  padding:40px;
-  background:rgba(255,255,255,0.05);
+  padding:28px;
+  background:rgba(12,12,12,0.78);
   border:1px solid rgba(255,255,255,0.08);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
@@ -253,19 +259,19 @@ section{
 
 .gallery img{
   width:100%;
-  max-width:450px;
-  height:300px;
+  max-width:300px;
+  height:260px;
   object-fit:cover;
   border-radius:25px;
   display:block;
   margin:0;
-  box-shadow:0 0 25px rgba(255, 72, 0, 0.25);
+  box-shadow:0 0 25px rgba(255, 72, 0, 0.18);
   transition:0.4s;
 }
 
 .mission-cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
 
@@ -280,22 +286,27 @@ section{
   height:220px;
   object-fit:cover;
   border-radius:20px;
+  margin:0 0 10px 0;
 }
 
 .mission h3{
   margin-top:20px;
   color:#ff5a28;
+  font-size:30px;
 }
 
 .mission p{
   margin-top:15px;
   line-height:1.8;
   color:#d7d7d7;
+  font-size:18px;
 }
 
 .quote{
   text-align:center;
-  background:linear-gradient(to right, #160909, #2c120d);
+  background:linear-gradient(to right, rgba(22,9,9,0.85), rgba(44,18,13,0.85));
+  padding:70px 30px;
+  border-radius:30px;
 }
 
 .quote h2{
@@ -315,6 +326,7 @@ footer{
   padding:40px;
   background:black;
   color:#888;
+  margin-top:60px;
 }
 
 p,
@@ -325,20 +337,32 @@ li{
 }
 
 ul{
-  padding-left:20px;
+  padding-left:22px;
 }
 
 img{
   width:100%;
   border-radius:25px;
-  margin:40px;
-  margin-top:10px;
-  box-shadow:0 0 25px rgba(255, 72, 0, 0.25);
+  box-shadow:0 0 25px rgba(255, 72, 0, 0.2);
   transition:0.4s;
 }
 
 .block{
   margin-bottom:60px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.top-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 @media(max-width:1000px){
@@ -370,12 +394,33 @@ img{
     font-size:30px;
   }
 
+  .left h1{
+    font-size:64px;
+  }
+
+  .left h2{
+    font-size:30px;
+  }
+
   p,
-  li{
+  li,
+  .card p,
+  .mission p,
+  .about-text p{
     font-size:16px;
   }
 
-  .glass{
+  .glass,
+  .gallery{
     padding:20px;
+  }
+
+  .quote h2{
+    font-size:32px;
+  }
+
+  .gallery img{
+    max-width:100%;
+    height:220px;
   }
 }
